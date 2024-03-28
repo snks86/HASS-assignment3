@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau Visualization with Overlay</title>
+<style>
+  .tableauPlaceholder {
+    position: relative;
+  }
+
+  .white-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust height as needed for 2 lines */
+    background-color: white; /* White background color */
+    z-index: 9999; /* Ensure the white box is above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; /* Adjust font size as needed */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change font to Segoe UI */
+  }
+</style>
+</head>
+<body>
+
+<div class='tableauPlaceholder' id='viz1711613470225' style='position: relative'>
+  <noscript>
+    <a href='#'>
+      <img alt='Million Dollar ' src='https://public.tableau.com/static/images/Th/TheRacetoaMillionDollarFlat/MillionDollar/1_rss.png' style='border: none' />
+    </a>
+  </noscript>
+  <object class='tableauViz' style='display:none;'>
+    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+    <param name='embed_code_version' value='3' />
+    <param name='site_root' value='' />
+    <param name='name' value='TheRacetoaMillionDollarFlat/MillionDollar' />
+    <param name='tabs' value='no' />
+    <param name='toolbar' value='yes' />
+    <param name='static_image' value='https://public.tableau.com/static/images/Th/TheRacetoaMillionDollarFlat/MillionDollar/1.png' />
+    <param name='animate_transition' value='yes' />
+    <param name='display_static_image' value='yes' />
+    <param name='display_spinner' value='yes' />
+    <param name='display_overlay' value='yes' />
+    <param name='display_count' value='yes' />
+    <param name='language' value='en-US' />
+    <param name='filter' value='publish=yes' />
+  </object>
+</div>
+
+<div class="white-box" id="footer">Shawn Ng 1008360</div>
+
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1711613470225');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if (divElement.offsetWidth > 800) {
+    vizElement.style.width='1200px';
+    vizElement.style.height='1827px';
+  } else if (divElement.offsetWidth > 500) {
+    vizElement.style.width='1200px';
+    vizElement.style.height='1827px';
+  } else {
+    vizElement.style.width='100%';
+    vizElement.style.height='827px';
+  }
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+  // Disable right-click on the footer
+  var footer = document.getElementById('footer');
+  footer.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+  });
+</script>
+
+</body>
+</html>
